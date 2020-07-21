@@ -663,6 +663,7 @@ def com_google_fonts_check_STAT_strings(ttFont):
   if ttFont["STAT"].table.AxisValueArray:
     for value in ttFont["STAT"].table.AxisValueArray.AxisValue:
       print(hasattr(value, 'AxisIndex'), hasattr(value, 'ValueNameID'), value.AxisIndex)
+      print(nameIDs)
       if value.AxisIndex != ital_axis_index: nameIDs.append(value.ValueNameID)
 
   bad_values = []
